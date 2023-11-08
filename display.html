@@ -3,52 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Animation</title>
+    <title>Display</title>
     <link href="./css/style.css" rel="stylesheet" />
     <style>
-      .box {
-        width: 100px;
-        height: 100px;
-        background-color: red;
-        position: relative;
-
-        /* animation: name duration timing-function delay iteration-count direction fill-mode; */
-        animation-name: move;
-        animation-duration: 2s;
-        animation-timing-function: linear;
-        /* animation-delay: 2s; */
-        animation-iteration-count: 4;
-        animation-direction: alternate-reverse;
-        /* animation-fill-mode: forwards; */
-        animation-play-state: running;
+      .container1,
+      .container2 {
+        display: inline-block; /* block und inline  */
+        width: 500px;
+        height: 300px;
+        background-color: lightgreen;
+        padding: 20px;
+        margin: 20px;
       }
-
-      @keyframes move {
-        from {
-          background-color: yellow;
-          top: 0;
-        }
-        to {
-          top: 200px;
-        }
+      h1 {
+        display: block;
       }
-
-      .box2 {
-        width: 100px;
-        height: 100px;
-        background-color: blue;
-        animation-name: slide;
-        animation-duration: 3s;
-        animation-fill-mode: forwards; /* Animasyonun son durumunu korumak için forwards kullanılır */
-      }
-
-      @keyframes slide {
-        from {
-          transform: translateX(0); /* Başlangıç konumu */
-        }
-        to {
-          transform: translateX(200px); /* Bitiş konumu */
-        }
+      p {
+        display: block;
       }
     </style>
   </head>
@@ -221,7 +192,20 @@
         </div>
       </div>
     </nav>
-    <div class="box"></div>
-    <div class="box2"></div>
+
+    <div class="vater" style="width: 100%">
+      <div class="container1">
+        <h1>Display</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident.
+        </p>
+      </div>
+      <div class="container2">
+        <h1>Display</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident.
+        </p>
+      </div>
+    </div>
   </body>
 </html>

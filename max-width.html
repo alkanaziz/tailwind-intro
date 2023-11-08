@@ -3,52 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Animation</title>
+    <title>Max-width</title>
     <link href="./css/style.css" rel="stylesheet" />
+
     <style>
-      .box {
-        width: 100px;
-        height: 100px;
-        background-color: red;
-        position: relative;
-
-        /* animation: name duration timing-function delay iteration-count direction fill-mode; */
-        animation-name: move;
-        animation-duration: 2s;
-        animation-timing-function: linear;
-        /* animation-delay: 2s; */
-        animation-iteration-count: 4;
-        animation-direction: alternate-reverse;
-        /* animation-fill-mode: forwards; */
-        animation-play-state: running;
+      body {
+        height: 100vh;
       }
-
-      @keyframes move {
-        from {
-          background-color: yellow;
-          top: 0;
-        }
-        to {
-          top: 200px;
-        }
-      }
-
-      .box2 {
-        width: 100px;
-        height: 100px;
-        background-color: blue;
-        animation-name: slide;
-        animation-duration: 3s;
-        animation-fill-mode: forwards; /* Animasyonun son durumunu korumak için forwards kullanılır */
-      }
-
-      @keyframes slide {
-        from {
-          transform: translateX(0); /* Başlangıç konumu */
-        }
-        to {
-          transform: translateX(200px); /* Bitiş konumu */
-        }
+      .container {
+        background-color: lightcyan;
+        margin: 20px;
+        padding: 20px;
+        max-width: 600px; /* Max width:  ste a maximum breite 600px  */
       }
     </style>
   </head>
@@ -221,7 +187,16 @@
         </div>
       </div>
     </nav>
-    <div class="box"></div>
-    <div class="box2"></div>
+    <div class="container">
+      <div class="content">
+        <h1>Max width Example</h1>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius itaque
+          voluptates illum quia. Asperiores aut rerum voluptatem a sequi
+          cupiditate sint veniam odit suscipit optio? Magnam aperiam alias dolor
+          labore.
+        </p>
+      </div>
+    </div>
   </body>
 </html>
